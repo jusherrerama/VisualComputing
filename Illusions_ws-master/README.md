@@ -27,8 +27,8 @@ Complete la tabla:
 |Efecto pradojico Cubo  |Estático-Paradojico |[Referencia1](https://cyt-ar.com.ar/cyt-ar/index.php/Cubo_de_Necker)                    | No aplica                            |                             |
 |Carrera de cuadrados |Movimiento-Interactivo|[Referencia2](http://www.michaelbach.de/ot/mot-feetLin/index.html) |  Al dar clic se borraran las lineas negras, demostrando que los cuadrados se mueven con la misma velocidad                        |                             |
 |La copa de Rubin  |Ambigua|[Referencia3](http://ilusionario-blog.blogspot.com/2014/01/la-copa-de-rubin.html)|No aplica  |                                   |
-|Cafe-Wall|||No aplica |               |
-|||||               |
+|Cafe-Wall|Geometrica Interactiva|[Referencia1](http://www.newworldencyclopedia.org/entry/Cafe_wall_illusion) |No aplica |               |
+|asd||||               |
 ||| |               |
 |||||       |
 
