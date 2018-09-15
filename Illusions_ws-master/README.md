@@ -9,7 +9,7 @@ Comprender algunos aspectos fundamentales de la [inferencia inconsciente](https:
 Implementar al menos 6 ilusiones de tres tipos distintos (paradójicas, geométricas, ambiguas, etc.), al menos dos con movimiento y dos con interactividad.
 
 ## Integrantes
-(2, o 3 si van a participar en el [best illusion of the year contest](illusionoftheyear.com) o van a implementar algunas ilusiones como visual hack)
+(máximo dos)
 
 Complete la tabla:
 
@@ -37,7 +37,7 @@ Complete la tabla:
 
   **Referencias**
 La vista es uno de los sentidos más sorprendentes por las capacidades que nos da de percibir nuevos elementos en determinadas imágenes. Es así como las ilusiones ópticas nos juegan trucos, viendo cosas diferentes en los mismos dibujos. Un ejemplo es la copa de Rubin, en la cual pueden percibirse diferentes objetos, dependiendo del ángulo.
-Una ilusión óptica es cualquier ilusión del Sentido percepción sentido de la visión que nos lleva a percibir la realidad de varias formas. 
+Una ilusión óptica es cualquier ilusión del Sentido percepción sentido de la visión que nos lleva a percibir la realidad de varias formas.
   **Temas de profundización**
 
   *Ilusiones en movimiento*: Los efectos de profundidad y percepción erronea de la realidad nos generan un gran interés debido a la similitud constate que se vive en el actuar cotidiano, donde el constante movimiento a veces produce apreciaciones incorrectas y se involucra mucho con la parte psicológica de la persona.
@@ -45,4 +45,4 @@ Una ilusión óptica es cualquier ilusión del Sentido percepción sentido de la
 ## Entrega
 
 * Modo de entrega: [Fork](https://help.github.com/articles/fork-a-repo/) la plantilla en las cuentas de los integrantes (de las que se tomará una al azar).
-* Plazo: 18/3/18 a las 24h.
+* Plazo: 16/9/18 a las 24h.
