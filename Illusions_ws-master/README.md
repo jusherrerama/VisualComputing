@@ -27,9 +27,9 @@ Complete la tabla:
 |Efecto pradojico Cubo  |Estático-Paradojico |[Referencia1](https://cyt-ar.com.ar/cyt-ar/index.php/Cubo_de_Necker)                    | No aplica                            |                             |
 |Carrera de cuadrados |Movimiento-Interactivo|[Referencia2](http://www.michaelbach.de/ot/mot-feetLin/index.html) |  Al dar clic se borraran las lineas negras, demostrando que los cuadrados se mueven con la misma velocidad                        |                             |
 |La copa de Rubin  |Ambigua|[Referencia3](http://ilusionario-blog.blogspot.com/2014/01/la-copa-de-rubin.html)|No aplica  |                                   |
-|Cafe-Wall|Geometrica Interactiva|[Referencia1](http://www.newworldencyclopedia.org/entry/Cafe_wall_illusion) |No aplica |               |
-|asd||||               |
-||| |               |
+|Cafe-Wall|Geometrica Interactiva|[Referencia4](http://www.newworldencyclopedia.org/entry/Cafe_wall_illusion) |Al dar click agrega o quita el efecto de la ilusion, en este caso, para quitar el fecto, establece los cuadrados paralalelos de acuerdo a su color  |               |
+|Pelotas rebotando|Ambigua Movimiento|[Referencia5](http://visualcomputing.github.io/Cognitive/#/5/33 )|No Aplica|              |
+|Penrose Triangle|Paradojica| [Referencia5](https://www.illusionsindex.org/i/impossible-triangle  )|  No Aplica             |
 |||||       |
 
 
