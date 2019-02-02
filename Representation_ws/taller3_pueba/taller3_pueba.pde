@@ -46,7 +46,7 @@ static boolean avoidWalls = true ;
 
 
 
-int initBoidNum = 120; // amount of boids to start the program with
+int initBoidNum = 100; // amount of boids to start the program with
 ArrayList<Boid> flock;
 Frame avatar;
 boolean animate = true;

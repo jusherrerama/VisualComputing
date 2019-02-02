@@ -30,5 +30,21 @@ Complete la tabla:
 
 ## Entrega
 
-* Subir el código al repositorio de la materia antes del 14/10/18 a las 24h.
-* Presentar el trabajo en ~la clase del 17/10/18 o 18/10/18~ una clase presencial por definir.
+* Subir el código al repositorio de la materia antes del 3/2/19 a las 24h.
+* Presentar el trabajo en la clase del 6/2/19 o 7/2/19.
+
+
+
+## Funcionalidades 
+  
+| Nombre                        | Tecla |
+|-------------------------------|-------|
+| Modo retenido - Modo inmediato|   r   |
+| FaceVertex  -  VertexVertex   |   f   |
+| Agegar punto de control |   +   |
+| Curva interpolator |   i   |
+| Curva  Bezier  de Processing |   z   |
+| Curva  Bezier grado 3|   b   |
+| Curva  Bezier grado 7 |   7   | 	
+| Curva  cubica Hermite    |   h   | 	
+  
