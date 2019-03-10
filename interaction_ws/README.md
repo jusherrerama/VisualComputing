@@ -27,6 +27,7 @@ Complete la tabla:
 
 ## Informe
 
+[Modelo sistema solar](https://github.com/jusherrerama/VisualComputing/blob/master/interaction_ws/Informe/Modelo%20sistema%20solar.pdf)
 
 ## Presentacion
 
