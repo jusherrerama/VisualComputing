@@ -222,11 +222,6 @@ void draw() {
   moveMobil();
   
   
-text("Accelerometer: \n" + 
-    "x: " + nfp(accelerometerX, 1, 3) + "\n" +
-    "y: " + nfp(accelerometerY, 1, 3) + "\n" +
-    "z: " + nfp(accelerometerZ, 1, 3), 0, 0, width, height);
-
 
 }
 void moveMobil (){
@@ -264,27 +259,6 @@ void moveMobil (){
       z = cam.getPosition()[2]; 
   }
   
-  if (mousePressed) {
-   
-    if (mouseY < 900 ) {
-      
-    int alfa = 500;
-    
-    x = lineRX(cam.getLookAt()[0],cam.getPosition()[0],alfa);
-    y = lineRX(cam.getLookAt()[1],cam.getPosition()[1],alfa);
-    z = lineRX(cam.getLookAt()[2],cam.getPosition()[2],alfa); 
-    
-    } else {
-     
-    int alfa = -500;
-    x = lineRX(cam.getLookAt()[0],cam.getPosition()[0],alfa);
-    y = lineRX(cam.getLookAt()[1],cam.getPosition()[1],alfa);
-    z = lineRX(cam.getLookAt()[2],cam.getPosition()[2],alfa);
-    
-    }
-//    println(x+"--"+y+"--"+z+"--");
-  }
-  
   
   
   cam.lookAt( x,  y, z,0,00001); 
@@ -296,7 +270,7 @@ void mousePressed()
      int alfa = 200;
     
     if (mouseY > 900 ) {
-      alfa = -150;
+      alfa = -200;
     }
         
     x = lineRX(cam.getLookAt()[0],cam.getPosition()[0],alfa);

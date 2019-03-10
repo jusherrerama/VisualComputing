@@ -4,20 +4,9 @@
   
 import processing.video.*;
 Movie myMovie;
-
-PImage i720;
-PImage i4k;
-PImage i1080;
+ 
 PShape can;
-float angle;
-
-PShader k3;
-PShader k5;
-PShader k7;
-PShader k9;
-PShader k11;
-PShader k13;
-PShader k15; 
+float angle; 
 
 int startTime;
 
@@ -43,7 +32,7 @@ void setup() {
   
   startTime = millis();
   shader(kernel[6]); 
-  image(images[1], 0, 0, width, height);         
-  println(millis()-startTime); 
+  image(images[0], 0, 0, width, height);       
+  println(millis()-startTime);     
   saveFrame("outputImage.png");  
 }
