@@ -21,104 +21,157 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+|     Juan Sebastian Herrera Maldonado       | jusherrerama             |
 
 ## Informe
 
-(elabore en este sección un informe del ejercicio realizado)
+ 
 
 
 ## Ejecucion
 
+### Implementacion shaders
+
+Imgrese a la carpeta 'Shader/BlurEffect'. 
+
+#### Prerequisites and installation
+1. Prerequisites
+Usted debera tener instalado:
+	- Processing.
+	- Demas complementos de video.
+	
+#### Compilation and  Execution
+1. Files in folder
+
+Dentro de la carpeta "Shader/BlurEffect" usted encontrara el archivo 'BlurEffect.pde' El cual lo debe abrir con processing para su ejecucion.
+
+Dentro de la carpeta "Shader/BlurEffect/data" encontrara 3 imagenes png (4k.png 1080.png 720.png ) que seran las utilizadas para la ejecucion de los algoritmos y 7 archivos GLSL, cada uno de estos contiene el shader en OpenGL con el algorimo (la mascara de convolucion) de blur effect segun sea el kernel utilizado.
+
+	- k3.glsl: Contien el shader de la mascara de convolucion de blur effect con kernel 3.  
+	- k5.glsl: Contien el shader de la mascara de convolucion de blur effect con kernel 5.
+	- k7.glsl: Contien el shader de la mascara de convolucion de blur effect con kernel 7.
+	- k9.glsl: Contien el shader de la mascara de convolucion de blur effect con kernel 9.
+	- k11.glsl: Contien el shader de la mascara de convolucion de blur effect con kernel 11.
+	- k13.glsl: Contien el shader de la mascara de convolucion de blur effect con kernel 13.
+	- k15.glsl: Contien el shader de la mascara de convolucion de blur effect con kernel 15.
+
+2. Execution
+
+Una vez en processing usted encontrara un arreglo de Pimage donde estaran ubicadas las imagenes prueba de la siguiente manera:
+
+	- Posicion [0] : estara la imagen "720.png"
+	- Posicion [1] : estara la imagen "1080.png"
+	- Posicion [2] : estara la imagen "4k.png"
+	
+Tambien usted encontrara un arreglo de  PShader donde estaran ubicadas las imagenes prueba de la siguiente manera:
+
+	- Posicion [0] : estara el shader de la mascara de convolucion de blur effect con kernel 3.
+	- Posicion [1] : estara el shader de la mascara de convolucion de blur effect con kernel 5.
+	- Posicion [2] : estara el shader de la mascara de convolucion de blur effect con kernel 7.
+	- Posicion [3] : estara el shader de la mascara de convolucion de blur effect con kernel 9.
+	- Posicion [4] : estara el shader de la mascara de convolucion de blur effect con kernel 11.
+	- Posicion [5] : estara el shader de la mascara de convolucion de blur effect con kernel 13.
+	- Posicion [6] : estara el shader de la mascara de convolucion de blur effect con kernel 15.
+En el setup usted selecciona la imagen que desea mostrar y el shader que desea aplicar (segun el kernel de blur effect que dessee aplicar). Luego se toman los tiempos de ejecucion y se guarda el frame resultante en la carpeta  "Shader/BlurEffect/" con el nombre de "outputImage.png".
 
 
 
-Para las graficas se necesita instalar GNUPLOT
-
-Dentro de la carpeta se encuentran 3 imagenes png (4k.png 1080.png 720.png ), dos programas en c (blur-effect.c ,speedup.c  ),  un ejecutable ( scripfin.sh ) y una carpeta de nombre results  la cual guardara todos los datos finales y donde se encontraran 6 archivos los cuales seran los scrips para realizar las graficas una vez corrido el ejecutable. 
-
-Una vez corrido el ejecutable se crearan todos los registros de los resultados en la carpeta results y en la misma carpeta en donde se encuentra el ejecutable se crearan 7 versiones de cada imagen (4kk3.png...4kk15.png .. etc..), donde el nombre de la imagen estara acompañada del tamaño del kernel que se uso para poner borrosa la imagen.
-
-blur-effect.c
-	Compilacion de blur-effect.c : // programa principal , donde se encuentra el algoritmo de poner borrosa la imagen
-		gcc blur-effect.c -lpng -pthread -o blur-effect
-	Ejecucion de blur-effect :
-		./blur-effect 1080.png 1080k3.png 3 5 2;
-		Donde:
-			1080.png: es la imagen png a tomar para aplicarle el efecto borroso.
-			1080k3.png:  es el nombre de la imagen resultado.
-			3 :  Es  tamaño del kernel a tomar (3,5,7,9,11,13,15)
-			5 :  Es el numero de hilos 
-
-blur-effect-omp.c
-	Compilacion de blur-effect-omp.c : // programa principal , donde se encuentra el algoritmo de poner borrosa la imagen
-		gcc blur-effect-omp.c  -lpng -fopenmp -o  blur-effect-omp
-	Ejecucion de blur-effect :
-		./blur-effect-omp 1080.png 1080k3.png 3 5 3;
-		Donde:
-			1080.png: es la imagen png a tomar para aplicarle el efecto borroso.
-			1080k3.png:  es el nombre de la imagen resultado.
-			3 :  Es  tamaño del kernel a tomar (3,5,7,9,11,13,15)
-			5 :  Es el numero de hilos
-			2 :  Es la resolucion de la imagen ( 1 -> 4k , 2 -> 1080p , 3 -> 720p) //este campo se usa solo para guardar de forma adecuada los datos resultado
-
-gpu.cu
-	Compilacion de gpu.cu : // programa principal , donde se encuentra el algoritmo de poner borrosa la imagen usando cuda
-		make
-	Ejecucion de blur-effect :
-		./gpu 1080.png 1080k3.png 3 5 3;
-		Donde:
-			1080.png: es la imagen png a tomar para aplicarle el efecto borroso.
-			1080k3.png:  es el nombre de la imagen resultado.
-			3 :  Es  tamaño del kernel a tomar (3,5,7,9,11,13,15)
-			5 :  Es el numero de hilos
-			2 :  Es la resolucion de la imagen ( 1 -> 4k , 2 -> 1080p , 3 -> 720p) //este campo se usa solo para guardar de forma adecuada los datos resultado
+ #### Resultados
+ En la carpeta "Shader/BlurEffect/resultados" Encontrara el resultado de el tiempo de ejecucion con cada Kernel.
+  
 
 
-
-speedup.c
-	Compilacion de speedup.c : // este programa es utilizado para hallar los speedup. 
-	  	 gcc speedup.c  -o speedup
-	Ejecucion de speedup :
-		./speedup
-speedupomp.c
-	Compilacion de speedupomp.c : // este programa es utilizado para hallar los speedup. 
-	  	 gcc speedupomp.c  -o speedupomp
-	Ejecucion de speedupomp :
-		./speedupomp
-speedupgpu.c
-	Compilacion de speedupgpu.c : // este programa es utilizado para hallar los speedup. 
-	  	 gcc speedupgpu.c  -o speedupgpu
-	Ejecucion de speedupgpu :
-		./speedupgpu
-
-posix.sh
-	Este ejecutable , corre el programa  de efecto borroso con todos los kernels (3,5,7,9,11,13,15),variando el numero de hilos (1-16) para cada uno. Solo basta correr este ejecutable para ver todos los resultados, este ejecutara a blur-effect.c   y luego que halla terminado todas las ejecuciones a este programa, ejecutara a speedup.c para los resultados finales .
-
-omp.sh
-	Este ejecutable , corre el programa  de efecto borroso con todos los kernels (3,5,7,9,11,13,15),variando el numero de hilos (1-16) para cada uno. Solo basta correr este ejecutable para ver todos los resultados, este ejecutara a blur-effect-omp.c  y luego que halla terminado todas las ejecuciones a este programa, ejecutara a speedupomp.c para los resultados finales .
-gpu.sh
-	Este ejecutable , corre el programa  de efecto borroso con todos los kernels (3,5,7,9,11,13,15),variando el numero de hilos (1-1000) para cada uno. Solo basta correr este ejecutable para ver todos los resultados, este ejecutara a gpu.cu  y luego que halla terminado todas las ejecuciones a este programa, ejecutara a speedupgpu.c para los resultados finales .
-
-script.sh
-	Ejecucion:
-		./script.sh
-		Este ejecutable , corre el programa con todos los kernels (3,5,7,9,11,13,15),variando el numero de hilos (1-16) para posix y omp , mientras que para CUda se lanzaran hilos de 3 a 10000 de 30 en 30. para cada uno. Solo basta correr este ejecutable para ver todos los resultados, este ejecutara a blur-effect.c blur-effect-omp.c gpu.cu y luego que halla terminado todas las ejecuciones a este programa, ejecutara a speedup.c speedupomp.c speedupgpu.c para los resultados finales . 
+### Implementacion software
+Imgrese a la carpeta 'SOFTWARE'. 
+#### Prerequisites and installation
+1. Prerequisites
+Usted debera tener instalado:
+	- OpenCV.
+	- libpng.
 
 
+2. Installation
+	- OpenCV:
+		- sudo apt-get install libopencv-dev
+		- sudo apt-get install opencv-data
+	- libpng:
+		- sudo apt-get install libpng-dev
 
-RESULTADOS
+#### Compilation and  Execution
+1. Files in folder
+Dentro de la carpeta 'SOFTWARE'  encontrara 3 imagenes png (4k.png 1080.png 720.png ) que seran las utilizadas para la ejecucion de los algoritmos, 4 ejecutables .sh que son utilizados para correr los programas de manera masiva ylos siguientes programas:
+	- blur-effect.c	 : Este corresponde al progrma que contiene la logica del blur effect basado en el modelo  Posix.
+	- blur-effect-omp.c : Este corresponde al progrma que contiene la logica del blur effect basado en el modelo  OpenMP.	 
+	- gpu.cu : Este corresponde al progrma que contiene la logica del blur effect basado en el modelo  CUDA.	 	 
 
-Luego de ejecutar los 3 scripts  apareceran los 3 resultados en 3 carpetas diferentes asi:
+2. Execution: 
 
-	resultados: posix
-	romp: omp
-	rgpu: Cuda
-GRAFICAS 
+	- blur-effect.c
+	
+			- Compilacion de blur-effect.c : // programa principal , donde se encuentra el algoritmo.
+					- gcc blur-effect.c -lpng -pthread -o blur-effect
+			- Ejecucion de blur-effect :
+					- ./blur-effect 1080.png 1080k3.png 3 5 2;
+							
+		- Donde:
+	
+			- 1080.png: es la imagen png a tomar para aplicarle el efecto borroso.
+			- 1080k3.png:  es el nombre de la imagen resultado.
+			- 3:  Es  tamaño del kernel a tomar (3,5,7,9,11,13,15)
+			- 5:  Es el numero de hilos 
 
-Para ver las graficas hay que instalar gnuplot y cargar cada uno de los archivos '.p' que se encuentran en cada una de las  carpetas  de los resultados ( load 'w_grafica_1080.p' ) dentro del entorno de gnuplot.
+	- blur-effect-omp.c
+	
+			- Compilacion de blur-effect-omp.c : // programa principal , donde se encuentra el algoritmo.
+						- gcc blur-effect-omp.c  -lpng -fopenmp -o  blur-effect-omp
+			- Ejecucion de blur-effect :
+						- ./blur-effect-omp 1080.png 1080k3.png 3 5 3;
+		- Donde:
+	
+			- 1080.png: es la imagen png a tomar para aplicarle el efecto borroso.
+			- 1080k3.png:  es el nombre de la imagen resultado.
+			- 3 :  Es  tamaño del kernel a tomar (3,5,7,9,11,13,15)
+			- 5 :  Es el numero de hilos
+			- 2 :  Es la resolucion de la imagen ( 1 -> 4k , 2 -> 1080p , 3 -> 720p) //este campo se usa solo para guardar de forma adecuada los datos resultado
+			
+
+	- gpu.cu
+	
+			- Compilacion de gpu.cu : // programa principal , donde se encuentra el algoritmo.
+					-make
+			- Ejecucion de blur-effect :
+					-./gpu 1080.png 1080k3.png 3 5 3;
+		- Donde:		
+			- 1080.png: es la imagen png a tomar para aplicarle el efecto borroso.
+			- 1080k3.png:  es el nombre de la imagen resultado.
+			- 3 :  Es  tamaño del kernel a tomar (3,5,7,9,11,13,15)
+			- 5 :  Es el numero de hilos
+			- 2 :  Es la resolucion de la imagen ( 1 -> 4k , 2 -> 1080p , 3 -> 720p) //este campo se usa solo para guardar de forma adecuada los datos resultado
 
 
+ 
+ #### Resultados
+ Dentro de la carpeta 'SOFTWARE'  encontrara 3 carpetas con los resultados de la ejecución de los programas con todos los kernels ( 3,5,7,9,11,13.15 ) y todas las imágenes ( 4k.jpg , 1080.jpg , 720.jpg ) organizadas de la siguiente manera:
+ 	- results : Corresponde a los resultados implementando POSIX.
+	- romp : Corresponde a los resultados implementando OpenMP.
+	- rgpu : Corresponde a los resultados implementando CUDA. 
+ #### Scripts
+ Ademas usted encontrara 4 scripts de ejecucion:
+ - [Posix]  Comando de ejecución de script :  ./posix.sh
+	El script de ejecucion de este programa variara de 1 hasta 16 hilos , para cada combinacion  de tipo de imagen y tamaño de kernel.
+
+- [OpenMP] Comando de ejecución de script :  ./omp
+
+	El script de ejecucion de este programa variara de 1 hasta 16 hilos , para cada combinacion  de tipo de imagen y tamaño de kernel.
+
+- [CUDA] Comando de ejecución de script :  ./gpu
+
+	El script de ejecucion de este programa variara de 3 hasta 1000 hilos, yendo de 30 en 30 , para cada combinacion  de tipo de imagen y tamaño de kernel.
+
+
+- [Scrip General] Comando de ejecución de script : ./script;  
+  
+ 
 
 ## Entrega
 
