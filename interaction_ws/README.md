@@ -22,12 +22,14 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+|     Juan Sebastian Herrera Maldonado       |       jusherrerama      |
 
 
 ## Informe
 
-(elabore en este sección un informe del ejercicio realizado)
+
+## Presentacion
+
 
 ## Entrega
 
