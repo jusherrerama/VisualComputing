@@ -72,6 +72,7 @@ void setup() {
 }
 
 void draw() {
+  
   background(10, 50, 25);
   ambientLight(128, 128, 128);
   directionalLight(255, 255, 255, 0, 1, -100);
@@ -141,6 +142,7 @@ void draw() {
   // updateAvatar(scene.trackedFrame("mouseClicked"));
   
    
+   println();
 }
 
   
@@ -201,12 +203,14 @@ void hetmit( float px1,float py1,float pz1,float px2,float py2,float pz2,float p
           
           
           
-          float m1x = 1/(2*(1-t)*(px3-px1));
-          float m2x = 1/(2*(1-t)*(px4-px2));          
-          float m1y = 1/(2*(1-t)*(py3-py1));
-          float m2y = 1/(2*(1-t)*(py4-py2));                    
-          float m1z = 1/(2*(1-t)*(pz3-pz1));
-          float m2z = 1/(2*(1-t)*(pz4-pz2));
+          float m1x = 1/2*( (px3-px1));
+          float m2x = 1/2*( (px4-px2));  
+          
+          float m1y = 1/2*( (py3-py1));
+          float m2y = 1/2*( (py4-py2));  
+          
+          float m1z = 1/2*(  (pz3-pz1));
+          float m2z = 1/2*(  (pz4-pz2));
           
           
           float step = 0.01;
@@ -216,9 +220,9 @@ void hetmit( float px1,float py1,float pz1,float px2,float py2,float pz2,float p
      //float z = (pz1*( ( -s*pow( u, 3) )  +  ( 2*s*pow( u, 2))    - (s*u)   ))   +   (pz2*( ( (2-s)*pow( u, 3) )  +  ( (s-3)*pow( u, 2))  + 1 ) )     +  (  pz3*(  ((s-2)* pow( u, 3))   +  ( (3-2)*pow( u, 2))    + (u*s)   ))  +   (pz4*( (s* pow( u, 3) )  -  ( s*pow( u, 2))      ))     ;
      
      
-        float x = (px2*( ( 2*pow( u, 3) )  -  ( 3*pow( u, 2))    +1   ))   +   (px3*( ( -2*pow( u, 3) )  +  ( 3*pow( u, 2))  ))     +  (m1*( ( pow( u, 3) )  -  ( 2*pow( u, 2))    +u   ))  +  (m2*( ( pow( u, 3) )  -  ( pow( u, 2))      ))     ;
-        float y = (py2*( ( 2*pow( u, 3) )  -  ( 3*pow( u, 2))    +1   ))   +   (py3*( ( -2*pow( u, 3) )  +  ( 3*pow( u, 2))  ))     +  (m1*( ( pow( u, 3) )  -  ( 2*pow( u, 2))    +u   ))  +  (m2*( ( pow( u, 3) )  -  ( pow( u, 2))      ))     ;
-        float z = (pz2*( ( 2*pow( u, 3) )  -  ( 3*pow( u, 2))    +1   ))   +   (py3*( ( -2*pow( u, 3) )  +  ( 3*pow( u, 2))  ))     +  (m1*( ( pow( u, 3) )  -  ( 2*pow( u, 2))    +u   ))  +  (m2*( ( pow( u, 3) )  -  ( pow( u, 2))      ))     ;
+        float x = (px2*( ( 2*pow( u, 3) )  -  ( 3*pow( u, 2))    +1   ))   +   (px3*( ( -2*pow( u, 3) )  +  ( 3*pow( u, 2))  ))     +  (m1x*( ( pow( u, 3) )  -  ( 2*pow( u, 2))    +u   ))  +  (m2x*( ( pow( u, 3) )  -  ( pow( u, 2))      ))     ;
+        float y = (py2*( ( 2*pow( u, 3) )  -  ( 3*pow( u, 2))    +1   ))   +   (py3*( ( -2*pow( u, 3) )  +  ( 3*pow( u, 2))  ))     +  (m1y*( ( pow( u, 3) )  -  ( 2*pow( u, 2))    +u   ))  +  (m2y*( ( pow( u, 3) )  -  ( pow( u, 2))      ))     ;
+        float z = (pz2*( ( 2*pow( u, 3) )  -  ( 3*pow( u, 2))    +1   ))   +   (py3*( ( -2*pow( u, 3) )  +  ( 3*pow( u, 2))  ))     +  (m1z*( ( pow( u, 3) )  -  ( 2*pow( u, 2))    +u   ))  +  (m2z*( ( pow( u, 3) )  -  ( pow( u, 2))      ))     ;
       
   strokeWeight(2);
   stroke(255, 255, 0);
