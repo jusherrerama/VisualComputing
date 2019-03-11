@@ -28,6 +28,10 @@ Complete la tabla:
  [Benchmark entre la implementación por software y la de shaders
 de máscara de convolución blur-effect](https://github.com/jusherrerama/VisualComputing/blob/master/Shaders/Informe/Benchmark%20%20%20blur-effect.pdf)
 
+## Presentacion
+ [Benchmark entre la implementación por software y la de shaders
+de máscara de convolución blur-effect](https://github.com/jusherrerama/VisualComputing/blob/master/Shaders/Presentacion/Blur%20effect.pdf)
+
 
 ## Ejecucion
 
