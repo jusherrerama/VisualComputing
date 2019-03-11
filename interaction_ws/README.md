@@ -30,6 +30,7 @@ Complete la tabla:
 [Modelo sistema solar](https://github.com/jusherrerama/VisualComputing/blob/master/interaction_ws/Informe/Modelo%20sistema%20solar.pdf)
 
 ## Presentacion
+[Modelo sistema solar](https://github.com/jusherrerama/VisualComputing/blob/master/interaction_ws/Presentacion/Sistema%20solar%20PROCESSING.pdf)
 
 ### Modelo a escala del sistema solar
 
